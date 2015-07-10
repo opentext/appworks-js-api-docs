@@ -37,6 +37,13 @@
     </md-sidenav>
 
     <div layout="column" flex id="content">
+        <md-toolbar class="md-accent md-hue-2">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>{{currentViewReadable}}</span>
+                </h2>
+            </div>
+        </md-toolbar>
         <md-content layout="column" flex class="md-padding">
             <ng-include src="'templates/' +  currentView + '.html'"></ng-include>
         </md-content>
