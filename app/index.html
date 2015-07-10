@@ -1,0 +1,55 @@
+<html lang="en" ng-app="awjsDoc">
+<head>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1"/>
+</head>
+<body layout="column" ng-controller="ApplicationController">
+<ng-include src="'templates/toolbar.html'"></ng-include>
+
+<div layout="row" flex>
+    <md-sidenav layout="column"
+                class="md-sidenav-left md-whiteframe-z2"
+                md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-sm')">
+        <md-list>
+            <md-subheader class="md-no-sticky">Getting Started</md-subheader>
+            <md-list-item class="md-3-line" ng-click="navigateTo('overview', $event)">
+                <p>Overview</p>
+            </md-list-item>
+            <md-list-item class="md-3-line" ng-click="navigateTo('installation', $event)">
+                <p>Installation</p>
+            </md-list-item>
+            <md-list-item class="md-3-line" ng-click="navigateTo('demos', $event)">
+                <p>Demos</p>
+            </md-list-item>
+            <md-subheader class="md-no-sticky">API Reference</md-subheader>
+            <md-list-item class="md-3-line" ng-click="navigateTo('api/secure-storage', $event)">
+                <p>Secure Storage</p>
+            </md-list-item>
+            <md-list-item class="md-3-line" ng-click="navigateTo('api/device', $event)">
+                <p>Device</p>
+            </md-list-item>
+            <md-list-item class="md-3-line" ng-click="navigateTo('api/offline', $event)">
+                <p>Offline</p>
+            </md-list-item>
+        </md-list>
+    </md-sidenav>
+
+    <div layout="column" flex id="content">
+        <md-content layout="column" flex class="md-padding">
+            <ng-include src="'templates/' +  currentView + '.html'"></ng-include>
+        </md-content>
+    </div>
+
+</div>
+
+<!-- Angular Material Dependencies -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
