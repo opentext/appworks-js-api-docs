@@ -1,1 +1,148 @@
-<h1>Accessing On Device Technology</h1>
+<p>
+    AppWorksJS gives you access to device features, as well as information about the device.
+</p>
+
+<h3>Battery Status</h3>
+<pre>
+    <code>
+        appworks.battery
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.battery-status">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Camera</h3>
+<pre>
+    <code>
+        appworks.camera.takePicture => (callback, error, options)
+
+        - use the device camera to take a photo
+        - callback is passed base 64 encoded representation of photo
+
+        appworks.camera.chooseFromGallery => (callback, error, options)
+
+        - open the device gallery to choose a photo
+        - callback is passed base 64 encoded representation of photo
+    </code>
+</pre>
+<p>Example</p>
+
+<pre>
+    <code>
+        appworks.camera.takePicture(function (dataUrl) {
+            console.log(dataUrl);
+        }, function (err) {
+            console.log(err)
+        });
+    </code>
+</pre>
+<p>Example</p>
+
+<pre>
+    <code>
+        appworks.camera.chooseFromGallery(function (dataUrl) {
+            console.log(dataUrl);
+        }, function (err) {
+            console.log(err)
+        });
+    </code>
+</pre>
+
+<h3>Console</h3>
+<pre>
+    <code>
+        appworks.console
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.console">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Contacts</h3>
+<pre>
+    <code>
+        appworks.contacts
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.contacts">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Device</h3>
+<pre>
+    <code>
+        appworks.device
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.device">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Accelerometer</h3>
+<pre>
+    <code>
+        appworks.accelerometer
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.device-motion">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Compass</h3>
+<pre>
+    <code>
+        appworks.compass
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Globalization</h3>
+<pre>
+    <code>
+        appworks.globalization
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.globalization">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Network Information</h3>
+<pre>
+    <code>
+        appworks.connection
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.network-information">Cordova Documentation</a>
+    for usage examples
+</p>
+
+<h3>Notifications</h3>
+<pre>
+    <code>
+        appworks.notification
+    </code>
+</pre>
+<p>
+    Please refer to
+    <a href="http://plugins.cordova.io/#/package/org.apache.cordova.dialogs">Cordova Documentation</a>
+    for usage examples
+</p>

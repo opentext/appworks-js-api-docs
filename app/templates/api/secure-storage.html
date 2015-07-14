@@ -1,1 +1,52 @@
-<h1>Secure Storage</h1>
+<p>
+    AppWorksJS Secure Storage makes use of powerful encryption features built into iOS.
+    If you wish to learn more about encryption on iOS, you can read Apple's security guide
+    <a href="https://www.apple.com/business/docs/iOS_Security_Guide.pdf">here.</a>
+</p>
+
+<h3>Storing a File</h3>
+<p>Store a file securely on the device.</p>
+
+<pre>
+    <code>appworks.storage.storeFile => (filename, downloadUrl, success, error, options)</code>
+
+    <code><b>filename</b>: the name to store the file on the device</code>
+    <code><b>downloadUrl</b>: the url to download the file from</code>
+    <code><b>success</b>: a success handler to run when the execution completes successfully</code>
+    <code><b>error</b>: an error handler to run when the execution encounters an error</code>
+    <code><b>options</b>: an options object to set headers and params on the request</code>
+</pre>
+
+<p>Example:</p>
+<iframe src="http://pastebin.com/embed_iframe.php?i=Zzc2E8W2" style="border:none;height:70%;width:100%"></iframe>
+
+<h3>Retrieving a File</h3>
+<p>Retrieve a file that has been stored on the device.</p>
+
+<pre>
+    <code>appworks.storage.getFile => (filename, success, error, options)</code>
+
+    <code><b>filename</b>: the name of the stored file</code>
+    <code><b>success</b>: a success handler to run when the execution completes successfully. the base 64 representation of the file is passed to this callback.</code>
+    <code><b>error</b>: an error handler to run when the execution encounters an error</code>
+    <code><b>options</b>: an options object to set the type of storage (temporary or persistent)</code>
+</pre>
+
+<p>Example:</p>
+<iframe src="http://pastebin.com/embed_iframe.php?i=GvLazXN2" style="border:none;height:40%;width:100%"></iframe>
+
+<h3>Uploading a File</h3>
+<p>Upload a file on the device to a remote location</p>
+
+<pre>
+    <code>appworks.storage.upload => (filename, uploadUrl, success, error, options)</code>
+
+    <code><b>filename</b>: the name of the stored file</code>
+    <code><b>uploadUrl</b>:the url of the server to receive the file</code>
+    <code><b>success</b>: a success handler to run when the execution completes successfully.</code>
+    <code><b>error</b>: an error handler to run when the execution encounters an error</code>
+    <code><b>options</b>: an options object to set headers and params on the request</code>
+</pre>
+
+<p>Example:</p>
+<iframe src="http://pastebin.com/embed_iframe.php?i=zStfgvE1" style="border:none;height:50%;width:100%"></iframe>
