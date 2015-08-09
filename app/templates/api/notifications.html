@@ -1,0 +1,52 @@
+<p>
+    AppworksJS gives you access to native notifications intended for your target app.
+</p>
+
+<h3>Enabling Notifications</h3>
+<p>
+    Notifications are enabled by default. This means that any new notification gets stored by appworksJS and is made
+    available through the api.
+</p>
+
+<p>To enable notifications:</p>
+<pre>
+    <code>appworks.notifications.on => ()</code>
+</pre>
+<iframe src="http://pastebin.com/embed_iframe.php?i=YrHtqT47" style="height:10%;border:none;width:100%"></iframe>
+<p>To disable notifications:</p>
+<pre>
+    <code>appworks.notifications.off => ()</code>
+</pre>
+<iframe src="http://pastebin.com/embed_iframe.php?i=rJi0bEPQ" style="height:10%;border:none;width:100%"></iframe>
+
+<h3>Receiving Notifications</h3>
+<p>
+    There are two ways to get notifications. First, you may ask for all of the notifications available to your target
+    app. This will be returned to you in an array. Second, you may ask for notifications that come in while the app
+    is open. To do this, you must define an <code>onmessage</code> callback. This callback will be fired whenever a
+    new notification is received by the app.
+</p>
+
+<p>Receiving all notifications</p>
+<pre>
+    <code>appworks.notifications.get => ()</code>
+</pre>
+<iframe src="http://pastebin.com/embed_iframe.php?i=qW0qB8t4" style="height:10%;border:none;width:100%"></iframe>
+
+<p>Receiving new notifications</p>
+<pre>
+    <code>appworks.notifications.onmessage= </code>
+    <code>onmessage: a function that takes in a notification as an argument</code>
+</pre>
+<iframe src="http://pastebin.com/embed_iframe.php?i=4eqxbPGE" style="height:10%;border:none;width:100%"></iframe>
+
+
+<h3>Clear Notifications</h3>
+<p>
+    You may clear the notifications queue by issuing a call to <code>clear()</code>. This will remove all notifications.
+    New notifications may still populate the list unless notifications are explicitly disabled.
+</p>
+<pre>
+    <code>appworks.notifications.clear => ()</code>
+</pre>
+<iframe src="http://pastebin.com/embed_iframe.php?i=LX96VMT7" style="height:10%;border:none;width:100%"></iframe>

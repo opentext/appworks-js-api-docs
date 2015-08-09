@@ -15,7 +15,8 @@ function ApplicationController($scope, $mdSidenav) {
         'installation': 'Installation',
         'api/device': 'On Device Technology',
         'api/offline': 'Offline Access',
-        'api/secure-storage': 'Secure Storage'
+        'api/secure-storage': 'Secure Storage',
+        'api/notifications': 'Notifications'
     };
 
     $scope.toggleSidenav = function (menuId) {
