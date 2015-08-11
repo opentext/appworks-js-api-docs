@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('awjsDoc', ['ngMaterial']);
+angular.module('awjsDoc', ['ngMaterial', 'hljs']);
 
 angular
     .module('awjsDoc')

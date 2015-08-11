@@ -23,8 +23,8 @@
 <p>
     There are two ways to get notifications. First, you may ask for all of the notifications available to your target
     app. This will be returned to you in an array. Second, you may ask for notifications that come in while the app
-    is open. To do this, you must define an <code>onmessage</code> callback. This callback will be fired whenever a
-    new notification is received by the app.
+    is open. To do this, you must register a callback using the <code>handler()</code> method. Your callback will be fired whenever a
+    new notification is received by the app, with the notification contents as argument.
 </p>
 
 <p>Receiving all notifications</p>
@@ -35,10 +35,13 @@
 
 <p>Receiving new notifications</p>
 <pre>
-    <code>appworks.notifications.onmessage= </code>
-    <code>onmessage: a function that takes in a notification as an argument</code>
+    <code>appworks.notifications.handler => (callback) </code>
+    <code>
+        callback: a function to be called whenever a new notification is received by the app. argument sent to this
+        callback is a json representation of the notification.
+    </code>
 </pre>
-<iframe src="http://pastebin.com/embed_iframe.php?i=4eqxbPGE" style="height:10%;border:none;width:100%"></iframe>
+<iframe src="http://pastebin.com/embed_iframe.php?i=4eqxbPGE" style="height:15%;border:none;width:100%"></iframe>
 
 
 <h3>Clear Notifications</h3>

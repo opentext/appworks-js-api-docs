@@ -1,5 +1,38 @@
-<h2>Including appworksJS and its dependencies</h2>
+<div id="appworks-cli">
+    <h2>Install the Appworks Command Line Tool</h2>
 
-<p>
-    AppWorksJS is preinstalled with every AppWorks app. There is no need to include it in your production apps.
-</p>
+    <p>Use the appworks cli to build and package your appworks apps.</p>
+    <p>Make sure you have <a href="https://nodejs.org" target="_blank">nodejs</a> installed and enter the following into your terminal:</p>
+    <div hljs>
+        npm install -g appworks
+    </div>
+    <p>
+        This will install the appworks command line tool. With this, you may create, modify, and package your apps.
+    </p>
+    <p>Run the following to see all of the available options:</p>
+    <div hljs>
+        appworks --help
+    </div>
+
+</div>
+
+<div id="include-notes">
+    <h2>Including AppworksJS and its dependencies</h2>
+
+    <p>
+        Appworks JS is automatically injected into every appworks apps before being deployed to the iOS or android
+        client. You do not need to worry about including the library yourself.
+    </p>
+    <p>
+        However, you must add an include tag for <code>cordova.js</code> and <code>appworks.min.js</code> in the <code>head</code> section of your index.html to get access to the
+        features of appworksJS. Note that they will be a 404 during development using a mobile browser or the iOS/android emulators. Emulation
+        is meant to provide a stripped down version of the library for basic testing.
+    </p>
+    <p>
+        If you are starting from a template (see Getting Started), you don't have to do anything; these include tags are
+        already present.
+    </p>
+    <p>Example index.html:</p>
+    <div hljs="" include="'templates/examples/sample-index.html'">
+    </div>
+</div>

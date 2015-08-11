@@ -1,25 +1,84 @@
-<p>
-    <i>New to AppWorks? Before getting into AppWorksJS, it might be helpful to
-        <a href="http://www.opentext.com/what-we-do/products/appworks" target="_blank">
-            read about the development platform.
-        </a>
-    </i>
-</p>
+<div id="overview">
+    <p>
+        <i>New to AppWorks? Before getting into AppWorksJS, it might be helpful to
+            <a href="http://www.opentext.com/what-we-do/products/appworks" target="_blank">
+                read about the development platform.
+            </a>
+        </i>
+    </p>
 
-<p>
-    <i>
-        If you would like to dive deeper, you can also read about Apache Cordova
-        <a href="https://cordova.apache.org/">here.</a>
-    </i>
-</p>
+    <p>
+        <i>
+            If you would like to dive deeper, you can also read about Apache Cordova
+            <a href="https://cordova.apache.org/">here.</a>
+        </i>
+    </p>
 
-<h2>How Do I Start?</h2>
+    <h2>How Do I Start?</h2>
 
-<ul>
-    <li>
-        <a href="#">Clone a sample application</a>
-    </li>
-    <li>
-        <a href="#">Watch a video tutorial</a>
-    </li>
-</ul>
+    <ul>
+        <li>
+            <a href="#appworks-cli">Clone a sample application</a>
+        </li>
+        <li>
+            <a href="#">Watch a video tutorial</a>
+        </li>
+    </ul>
+</div>
+
+<div id="appworks-cli">
+    <h2>Getting Started</h2>
+
+    <h4>Appworks Command Line Interface</h4>
+    <p>Use the appworks cli to build and package your appworks apps.</p>
+    <p>Make sure you have <a href="https://nodejs.org" target="_blank">nodejs</a> installed and enter the following into your terminal:</p>
+    <div hljs>
+        npm install -g appworks
+    </div>
+    <p>
+        This will install the appworks command line tool. With this, you may create, modify, and package your apps.
+    </p>
+
+    <h4>Clone a sample application</h4>
+    <p>
+        Download a starter template and get started:
+    </p>
+    <div hljs>
+        appworks start --name myapp
+    </div>
+    <p>
+        This will install the appworks starter template, which gives you access to many of the powerful features only
+        available through appworks.
+    </p>
+
+    <h4>Emulate the app</h4>
+    <p>
+        Emulate the app using the iOS simulator (Mac OSX only). Note: this will only give you access to a limited
+        number of features. To get all of the features you must deploy your app to the appworks gateway.
+    </p>
+    <div hljs>
+        cd myapp
+        appworks emulate
+    </div>
+    <h4>Package your app</h4>
+    <p>
+        This will take the contents of your app and create a zip file in the <code>package</code> directory.
+        The appworks cli will look inside of a folder named <code>www</code>, so make sure all of the styles, js, and
+        html contents are placed there. You may also add an icon by placing an image named <code>icon.png</code> in
+        the root of your app. Feel free to modify <code>app.properties</code> to change the display name or other
+        details about your app before deploying it to the gateway.
+    </p>
+    <div hljs>
+        appworks package
+    </div>
+    <p>
+        Upload this zip to your gateway and run the app using the appworks iOS or android client.
+    </p>
+
+</div>
+
+
+<div id="questions">
+    <h2>Get further help</h2>
+    <p><i>Have a question?</i> Head over to the <a href="">Developer Portal</a> and ask away.</p>
+</div>
