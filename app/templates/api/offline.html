@@ -24,8 +24,14 @@
     <code><b>options</b>: an options object to set request options and register event handlers.</code>
 </pre>
 
-<p>Example:</p>
-<iframe src="http://pastebin.com/embed_iframe.php?i=ecSBcddW" style="border:none;height:50%;width:100%"></iframe>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/offline/sample-queue-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
 
 <h3>Register an Event Handler</h3>
 <p>Register a callback function to be called when a request with a given eventListener key is returned.</p>
@@ -38,12 +44,18 @@
     <code>appworks.offline.registerEventHandler => (eventName, handler)</code>
 
     <code><b>eventName</b>: the name of the event</code>
-    <code><b>options</b>: a handler to be called when an event with eventName is broadcast</code>
+    <code><b>handler</b>: a handler to be called when an event with eventName is broadcast</code>
 </pre>
 
 
-<p>Example:</p>
-<iframe src="http://pastebin.com/embed_iframe.php?i=RNHbJ9sd" style="border:none;height:20%;width:100%"></iframe>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/offline/sample-register-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
 
 <h3>Remove an Event Handler</h3>
 <p>Unregister a callback function to be called when a request with a given eventListener key is returned.</p>
@@ -52,11 +64,17 @@
     <code>appworks.offline.removeEventHandler => (eventName, handler)</code>
 
     <code><b>eventName</b>: the name of the event to unregister</code>
-    <code><b>options</b>: a handler to be removed from event with eventName</code>
+    <code><b>handler</b>: a handler to be removed from event with eventName</code>
 </pre>
 
-<p>Example:</p>
-<iframe src="http://pastebin.com/embed_iframe.php?i=RNHbJ9sd" style="border:none;height:20%;width:100%"></iframe>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/offline/sample-remove-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
 
 <h3>Flush Pending Requests</h3>
 <p>
@@ -68,8 +86,14 @@
     <code>appworks.offline.flush => ()</code>
 </pre>
 
-<p>Example:</p>
-<iframe src="http://pastebin.com/embed_iframe.php?i=as4uTEPg" style="border:none;height: 10%;width:100%"></iframe>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/offline/sample-flush-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
 
 <h3>Get Stored Requests</h3>
 <p>
@@ -81,8 +105,14 @@
     <code><b>callback</b>: a callback to execute on the array of stored requests</code>
 </pre>
 
-<p>Example:</p>
-<iframe src="http://pastebin.com/embed_iframe.php?i=W3vzKjwa" style="border:none;height: 15%;width:100%"></iframe>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/offline/sample-get-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
 
 <h3>Generate Event ID</h3>
 <p>
@@ -92,5 +122,11 @@
     <code>appworks.offline.id => ()</code>
 </pre>
 
-<p>Example:</p>
-<iframe src="http://pastebin.com/embed_iframe.php?i=fxkUkk4s" style="border:none;height:20%;width:100%"></iframe>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/offline/sample-id-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
