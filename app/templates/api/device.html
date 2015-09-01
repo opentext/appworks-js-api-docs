@@ -48,6 +48,58 @@
     </md-tab>
 </md-tabs>
 
+<h3>Geolocation</h3>
+<p>AppworksJS gives you access to the GPS functionality of your device.</p>
+<pre>
+    <code>
+        appworks.geolocation.getCurrentPosition => (geolocationSuccess, error, options)
+
+        - use the device GPS to get current location coordinates
+        - geolocationSuccess callback is passed Position object
+        - error callback is passed error object with status code and message
+
+        appworks.geolocation.watchPosition => (geolocationSuccess, error, options)
+        returns => String
+
+        - watches for changes to the device's current position
+        - returns an id that references the watch position interval. this id should be used with clearWatch() to
+        stop watching for changes in position
+
+        appworks.geolocation.clearWatch => (id)
+        - stop watching for changes to the device's location referenced by the id parameter
+    </code>
+</pre>
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs>
+                var getLocation = function () {
+
+                    var options = {enableHighAccuracy: true, timeout: 2000};
+
+                    appworks.geolocation.getCurrentPosition(onSuccess, onError, options );
+
+                    function onSuccess(position) {
+                        alert('Latitude: '          + position.coords.latitude          + '\n' +
+                        'Longitude: '         + position.coords.longitude         + '\n' +
+                        'Altitude: '          + position.coords.altitude          + '\n' +
+                        'Accuracy: '          + position.coords.accuracy          + '\n' +
+                        'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+                        'Heading: '           + position.coords.heading           + '\n' +
+                        'Speed: '             + position.coords.speed             + '\n' +
+                        'Timestamp: '         + position.timestamp                + '\n');
+                    }
+
+                    function onError(err) {
+                        console.log(err);
+                    }
+                };
+            </div>
+        </md-content>
+    </md-tab>
+</md-tabs>
+
 <h3>Console</h3>
 <pre>
     <code>
