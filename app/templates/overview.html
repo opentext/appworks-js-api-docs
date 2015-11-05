@@ -33,10 +33,11 @@
     <p>Use the appworks cli to build and package your appworks apps.</p>
     <p>Make sure you have <a href="https://nodejs.org" target="_blank">nodejs</a> installed and enter the following into your terminal:</p>
     <div hljs>
-        npm install -g appworks
+        npm install -g cordova ionic appworks
     </div>
     <p>
-        This will install the appworks command line tool. With this, you may create, modify, and package your apps.
+        This will install the appworks command line tool, with cordova and ionic as dependencies.
+        With this, you may create, modify, and package your apps.
     </p>
 
     <h4>Clone a sample application</h4>
@@ -50,6 +51,16 @@
         This will install the appworks starter template, which gives you access to many of the powerful features only
         available through appworks.
     </p>
+
+    <h4>Run the app locally</h4>
+    <p>
+        Run the app in a browser. Note: this will only give you access to a limited
+        number of features. To get all of the features you must deploy your app to the appworks gateway.
+    </p>
+    <div hljs>
+        cd myapp
+        appworks serve
+    </div>
 
     <h4>Emulate the app</h4>
     <p>

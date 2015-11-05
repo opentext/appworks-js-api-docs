@@ -1,0 +1,50 @@
+<p>
+    AppWorksJS Authentication allows you to authenticate against your backend systems using login credentials
+    stored securely on the device.
+</p>
+
+<h3>Authenticating</h3>
+<p>
+    Authenticate against your backend system. This is a login request made to the gateway,
+    and the response may include tokens and credentials required in your app. This response
+    is bound to a private object that may be accessed by using the getAuth() method.
+</p>
+
+<pre>
+    <code>appworks.auth.authenticate => ()</code>
+</pre>
+
+<p>
+    This method returns a promise that takes a single callback which will be executed when the auth response is returned.
+    See the example below.
+</p>
+
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/auth/authentication-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
+
+<h3>Getting the Auth Object</h3>
+<p>
+    Once you have authenticated, you will want to see the response to get access to tokens and other login details.
+    You can do this by calling the following method.
+</p>
+
+<pre>
+    <code>appworks.auth.getAuth => ()</code>
+</pre>
+
+<p>This will return the entire response from the call against the gateway auth endpoint.</p>
+
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/auth/get-auth-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>

@@ -8,13 +8,17 @@
 <p>Store a file securely on the device.</p>
 
 <pre>
-    <code>appworks.storage.storeFile => (filename, downloadUrl, success, error, options)</code>
+    <code>appworks.storage.storeFile => (filename, downloadUrl, success, error, options, useSharedDocumentUrl)</code>
 
     <code><b>filename</b>: the name to store the file on the device</code>
     <code><b>downloadUrl</b>: the url to download the file from</code>
     <code><b>success</b>: a success handler to run when the execution completes successfully</code>
     <code><b>error</b>: an error handler to run when the execution encounters an error</code>
     <code><b>options</b>: an options object to set headers and params on the request</code>
+    <code><b>useSharedDocumentUrl</b>: a boolean set to determine whether to store the file privately,
+        or in a shared space where it can be opened by authorized third party applications on the
+        device (e.g. Microsoft Office).
+    </code>
 </pre>
 
 <md-tabs md-dynamic-height md-border-bottom>
@@ -34,7 +38,7 @@
     <code>appworks.storage.getFile => (filename, success, error, options)</code>
 
     <code><b>filename</b>: the name of the stored file</code>
-    <code><b>success</b>: a success handler to run when the execution completes successfully. the base 64 representation of the file is passed to this callback.</code>
+    <code><b>success</b>: a success handler to run when the execution completes successfully. the base 64representation of the file is passed to this callback.</code>
     <code><b>error</b>: an error handler to run when the execution encounters an error</code>
     <code><b>options</b>: an options object to set the type of storage (temporary or persistent)</code>
 </pre>
@@ -53,13 +57,17 @@
 <p>Upload a file on the device to a remote location</p>
 
 <pre>
-    <code>appworks.storage.upload => (filename, uploadUrl, success, error, options)</code>
+    <code>appworks.storage.upload => (filename, uploadUrl, success, error, options, useSharedDocumentUrl)</code>
 
     <code><b>filename</b>: the name of the stored file</code>
     <code><b>uploadUrl</b>:the url of the server to receive the file</code>
     <code><b>success</b>: a success handler to run when the execution completes successfully.</code>
     <code><b>error</b>: an error handler to run when the execution encounters an error</code>
     <code><b>options</b>: an options object to set headers and params on the request</code>
+    <code><b>useSharedDocumentUrl</b>: a boolean set to determine whether to pull the file from a private
+        location on disk, or from a shared space. Use this option if the file was stored with the same
+        parameter in the storeFile() method.
+    </code>
 </pre>
 
 <md-tabs md-dynamic-height md-border-bottom>

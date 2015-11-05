@@ -1,7 +1,62 @@
 <p>
-    AppWorksJS allows you to work offline by storing http requests while the device is offline, and sending them
-    once the device has come back online.
+    AppWorksJS allows you to work offline by storing intention in the form of deferred events or http requests
+    while the device is offline, and processing this intention once the device has come back online.
 </p>
+
+<h3>Defer an Event</h3>
+<p>
+    Defer a function/method/event to be handled when the device state changes from 'offline' to 'online'.
+</p>
+
+<p>
+    The idea behind this method is to capture intention. There may be a sequence of events the user has intended
+    for the app to do while they were offline, and when they come back online the expectation is that what they
+    have done while they were offline is now in sync.
+</p>
+
+<p>
+    To use this method, you must provide three arguments, and optionally a fourth:
+</p>
+
+<ul>
+    <li>
+        <b>identifier</b> - this is a string that contains the name of, e.g. a function you must call when the device
+        changes state from offline to online. This is used by you, the developer, to determine what action to perform.
+    </li>
+    <li>
+        <b>args</b> - typically, these are the arguments you will execute the function that you have identified by your
+        function identifier. Other use cases are certainly possible, and any JSON data may be passed to this argument.
+        You decide what to do with this data when the device changes offline state.
+    </li>
+    <li>
+        <b>eventListener</b> - this is a string used to dispatch an event that contains the encapsulation of your
+        intention. You provide this string and add an event listener to listen for this event. When this event is
+        processed (processing happens in first in first out order), it will send back <b>identifier</b>, <b>args</b>,
+        and <b>eventListener</b>
+    </li>
+    <li>
+        <b>timeBuffer</b> - this is the amount of time that should transpire between the dispatch of events processed
+        by the deferred queue. Default is 500ms.
+    </li>
+</ul>
+
+<pre>
+    <code>appworks.offline.defer => (identifier, args, eventListener, timeBuffer)</code>
+
+    <code><b>identifier</b>: a string used to identify the event that will be processed</code>
+    <code><b>args</b>: any JSON data that you will use to reconstruct your offline intention</code>
+    <code><b>eventListener</b>: a string containing the name of an event listener your app will be listening for to handle offline event processing</code>
+    <code><b>timeBuffer</b>: the amount of time that should transpire between dispatch of deferred events</code>
+</pre>
+
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="JS">
+        <md-content class="md-padding">
+            <p>Example:</p>
+            <div hljs="" include="'templates/examples/offline/defer-ref.js'"></div>
+        </md-content>
+    </md-tab>
+</md-tabs>
 
 
 <h3>Queueing a Request</h3>
