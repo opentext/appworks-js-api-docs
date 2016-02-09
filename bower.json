@@ -2,8 +2,8 @@
   "name": "angular-seed",
   "description": "A starter project for AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "homepage": "https://developer.opentext.com",
+  "license": "Apache 2.0",
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
